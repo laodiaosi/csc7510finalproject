@@ -15,6 +15,7 @@
   border: none;
   color: white;
   padding: 15px 32px;
+	vertical-align: middle;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -24,6 +25,7 @@
 }
 
 .button1 {background-color: #008CBA;} /* Blue */
+.button2 {width: 10px; height: 10px;}
 </style>
 
 	<!-- Basic need -->
@@ -168,7 +170,7 @@
 						</li>
 					</ul>
 					<ul class="nav navbar-nav flex-child-menu menu-right">
-						<li class="userNameAfterLogin">name</li>
+						<li class="userNameAfterLogin"><p id="changename">name</p></li>
 						<li class="loginLink"><a href="#">LOG In</a></li>
 						<li class="btn signupLink"><a href="#">sign up</a></li>
 					</ul>
@@ -181,9 +183,9 @@
 			<form action="/.java">
 					 <input type="text" placeholder="Search for " name="search">
 					 <button class="button button1 "type="submit" >a movie</button>
-					 <button class="button button1 "type="submit" >productors</button>
-					 <button class="button button1 "type="submit" >actors/actresses</button>
 		 </form>
+
+
 	    <!-- </div> -->
 	</div>
 </header>
@@ -337,7 +339,11 @@
 					            				<img src="images/uploads/mv-item1.jpg" alt="" width="185" height="284">
 					            			</div>
 					            			<div class="hvr-inner">
-					            				<a  href="moviesingle.html"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+					            				<!-- <a  href="moviesingle.html"> Read more <i class="ion-android-arrow-dropright"></i> </a> -->
+
+															<a  href="moviesingle_1.html"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+
+														 </form>
 					            			</div>
 					            			<div class="title-in">
 					            				<h6><a href="#">Interstellar</a></h6>
@@ -470,6 +476,8 @@
 					            			</div>
 					            			<div class="hvr-inner">
 					            				<a  href="moviesingle.html"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+
+
 					            			</div>
 					            			<div class="title-in">
 					            				<h6><a href="#">Interstellar</a></h6>
@@ -1138,59 +1146,12 @@
 			<div class="col-md-4">
 				<div class="sidebar">
 					<div class="searh-form">
-						<h4 class="sb-title">Search for movie</h4>
-						<form class="form-style-1" action="#">
+						<h4 class="sb-title">Search for movie actors&actresses</h4>
+						<form class="form-style-1" action="actor">
 							<div class="row">
 								<div class="col-md-12 form-it">
 									<label>Movie name</label>
 									<input type="text" placeholder="Enter keywords">
-								</div>
-								<div class="col-md-12 form-it">
-									<label>Genres & Subgenres</label>
-									<div class="group-ip">
-										<select
-											name="skills" multiple="" class="ui fluid dropdown">
-											<option value="">Enter to filter genres</option>
-											<option value="Action1">Action 1</option>
-					                        <option value="Action2">Action 2</option>
-					                        <option value="Action3">Action 3</option>
-					                        <option value="Action4">Action 4</option>
-					                        <option value="Action5">Action 5</option>
-										</select>
-									</div>
-
-								</div>
-								<div class="col-md-12 form-it">
-									<label>Rating Range</label>
-
-									 <select>
-										<option value="range">-- Select the rating range below --</option>
-										<option value="saab">-- Select the rating range below --</option>
-										<option value="saab">-- Select the rating range below --</option>
-										<option value="saab">-- Select the rating range below --</option>
-									</select>
-
-								</div>
-								<div class="col-md-12 form-it">
-									<label>Release Year</label>
-									<div class="row">
-										<div class="col-md-6">
-											<select>
-												<option value="range">From</option>
-												<option value="number">10</option>
-												<option value="number">20</option>
-												<option value="number">30</option>
-											</select>
-										</div>
-										<div class="col-md-6">
-											<select>
-												<option value="range">To</option>
-												<option value="number">20</option>
-												<option value="number">30</option>
-												<option value="number">40</option>
-											</select>
-										</div>
-									</div>
 								</div>
 								<div class="col-md-12 ">
 									<input class="submit" type="submit" value="submit">
@@ -1198,6 +1159,61 @@
 							</div>
 						</form>
 					</div>
+
+					<div class="searh-form">
+						<h4 class="sb-title">Search for movie productors</h4>
+						<form class="form-style-1" action="productor">
+							<div class="row">
+								<div class="col-md-12 form-it">
+									<label>Movie name</label>
+									<input type="text" placeholder="Enter keywords">
+								</div>
+								<div class="col-md-12 ">
+									<input class="submit" type="submit" value="submit">
+								</div>
+							</div>
+						</form>
+					</div>
+
+					<div class="searh-form">
+						<h4 class="sb-title">Top 10 hottest movies</h4>
+						<form class="form-style-1" action="top10video">
+							<div class="row">
+								<div class="col-md-12 ">
+									<input class="submit" type="submit" value="submit">
+								</div>
+							</div>
+						</form>
+					</div>
+
+					<div class="searh-form">
+						<h4 class="sb-title">Today movies</h4>
+						<form class="form-style-1" action="todaymovie">
+							<div class="row">
+								<div class="col-md-12 ">
+									<input class="submit" type="submit" value="submit">
+								</div>
+							</div>
+						</form>
+					</div>
+
+					<div class="searh-form">
+						<h4 class="sb-title">view and comments</h4>
+						<form class="form-style-1" action="comment">
+							<div class="row">
+								<div class="col-md-12 form-it">
+									<label>movie name</label>
+									<input type="text" placeholder="Enter keywords">
+								</div>
+								<div class="col-md-12 ">
+									<input class="submit" type="submit" value="submit">
+								</div>
+							</div>
+						</form>
+					</div>
+
+
+
 					<div class="celebrities">
 						<h4 class="sb-title">Spotlight Celebrities</h4>
 						<div class="celeb-item">
@@ -1243,11 +1259,25 @@
 			<p><a href="#" id="back-to-top">Back to top  <i class="ion-ios-arrow-thin-up"></i></a></p>
 		</div>
 
-
+<script type="text/javascript">
+		// const url1 = new URL(window.location.toLocaleString());
+		// const name1 = url1.get('name');
+		// (function(){
+		// 	document.getElemenyById('changename').innerHTML = 1;
+		// })();
+		window.onload=function(){
+			const url1 = new URL(window.location.toLocaleString()).searchParams;
+			const name1 = url1.get('name');
+			console.log(name1);
+			document.getElementById('changename').innerHTML = name1;
+		}
+</script>
 <script src="js/jquery.js"></script>
 <script src="js/plugins.js"></script>
 <script src="js/plugins2.js"></script>
 <script src="js/custom.js"></script>
+
+
 </body>
 
 <!-- index14:58-->
